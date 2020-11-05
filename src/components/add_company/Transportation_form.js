@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { Field, reduxForm, submit, FieldArray } from "redux-form";
 import { renderBuses } from "./buses";
 import CompanyData from "./company_data";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCompanies } from "../../actions/transportationActions";
+import {
+  GetCountries,
+  getVehicleTypes,
+  getCities,
+} from "../../actions/lookupActions";
 import {
   createCompany,
   updateCompany,
 } from "../../actions/transportationActions";
 import { connect } from "react-redux";
 import { find } from "lodash";
-const num_of_buses = 3;
 
 const required = (v) => {
   if (!v || v === "") {
@@ -27,7 +33,6 @@ const onSubmit = (values, dispatch, props) => {
     console.log("uuuuuuppp");
     updateCompany(JSON.stringify(flag.ID, values));
   }
-  alert(JSON.stringify(values));
 };
 
 // const getBuses = (vehicleTypes, setBuses) => {
@@ -63,6 +68,14 @@ let FormCode = (props) => {
     vehicleTypes,
   } = props;
   const company = props.activeCompany;
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchCompanies());
+    dispatch(GetCountries());
+    dispatch(getCities(1));
+    dispatch(getVehicleTypes());
+  }, []);
+
   return (
     <form onSubmit={handleSubmit}>
       <CompanyData countries={countries} cities={cities} required={required} />

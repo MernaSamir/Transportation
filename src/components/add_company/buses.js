@@ -1,6 +1,7 @@
 import { toLower, get, map } from "lodash";
 import * as InputComponnets from "./components/types";
 import { Field } from "redux-form";
+
 import "./style.scss";
 const getYears = (startYear) => {
   var currentYear = new Date().getFullYear(),
