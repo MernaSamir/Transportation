@@ -1,0 +1,33 @@
+form {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.div {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 1%;
+  p {
+    width: 100%;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .element {
+    margin: 0 1%;
+  }
+
+  .buttons {
+    display: flex;
+    width: 100%;
+  }
+}
+.busesCont {
+  width: 100%;
+
+  .busDiv {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

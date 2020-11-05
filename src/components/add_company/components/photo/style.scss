@@ -1,0 +1,52 @@
+@import "~@assets/Colors.less";
+
+.head {
+  // .FontSettings(0.9vw, @fontSubcolor);
+  font-size: 0.9vw;
+  min-width: 70%;
+}
+.outerDiv {
+  width: 12vw;
+  height: 10rem;
+  margin: 0% 1% 1% 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid #b7b7b7;
+
+  .icons {
+    display: flex;
+    width: 100%;
+    // justify-content: space-between;
+  }
+}
+.times {
+  align-self: center;
+  font-size: 1.5vw;
+  margin-left: 2vw;
+}
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 35vh;
+}
+.button {
+  width: auto;
+  height: auto;
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-height: 80%;
+  &:focus {
+    outline: none;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .camera {
+    margin: auto;
+  }
+}

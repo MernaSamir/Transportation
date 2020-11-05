@@ -1,0 +1,7 @@
+export const FETCH_COMPANIES = "FETCH_COMPANIES";
+export const NEW_COMPANY = "NEW_COMPANY";
+export const GET_COMPANY = "GET_COMPANY";
+export const GET_COUNTRIES = "GET_COUNTRIES";
+export const GET_CITIES = "GET_CITIES";
+export const GET_VEHICLETYPES = "GET_VEHICLETYPES";
+export const UPDATE_COMPANY = "UPDATE_COMPANY";

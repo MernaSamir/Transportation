@@ -1,0 +1,38 @@
+@import "~bootstrap/scss/bootstrap";
+$main_blue: #306c95;
+$white: #ffffff;
+.header {
+  background-color: $main_blue;
+  color: $white;
+  padding: 1%;
+}
+p {
+  color: $main_blue;
+  margin: 1%;
+}
+button {
+  background-color: $main_blue;
+  color: $white;
+  border: none;
+  padding: 0.5%;
+  margin: 1%;
+  width: 16vw;
+}
+// .div {
+//   display: flex;
+//   width: 100%;
+//   flex-wrap: wrap;
+//   justify-content: flex-start;
+//   margin: 1%;
+//   p {
+//     width: 100%;
+//     font-weight: 600;
+//     font-size: 1rem;
+//   }
+//   .element {
+//     margin: 0 1%;
+//   }
+// }
+input {
+  border: 1px solid $main_blue;
+}
